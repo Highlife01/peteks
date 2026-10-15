@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Kamyon Bul",
+    "description": "Lojistik ve nakliye arayanlar için dijital çözüm platformu. Yük taşıtmak isteyenlerle nakliyecileri buluşturan güvenilir pazar yeri.",
+    "url": "https://www.kamyonbul.com.tr",
+    "icon": "truck"
+  },
+  {
+    "name": "Kira Sözleşmesi",
+    "description": "Online kira sözleşmesi oluşturma ve yönetim aracı. Gayrimenkul kiralamalarında güvenli ve hızlı dijital kontrat çözümü.",
+    "url": "https://www.kirasozlesmesi.space",
+    "icon": "file-text"
+  },
+  {
+    "name": "Anatolia Heal",
+    "description": "Türkiye sağlık turizmi ve danışmanlık hizmetleri. Uluslararası hastalara profesyonel sağlık rehberliği ve tedavi planlaması.",
+    "url": "https://www.anatoliaheal.com.tr",
+    "icon": "heart"
+  },
+  {
+    "name": "İskan Var",
+    "description": "İskan sorgulama ve yapı kullanım izni danışmanlığı. Gayrimenkul alım satımında iskan durumunu doğrulayan güvenilir kaynak.",
+    "url": "https://www.iskanvar.com.tr",
+    "icon": "home"
+  },
+  {
+    "name": "Benim Yaverim",
+    "description": "Profesyonel kişisel asistanlık ve iş takip hizmetleri. Kurumsal ve bireysel ihtiyaçlarınız için size özel asistanlık çözümleri.",
+    "url": "https://www.benimyaverim.com.tr",
+    "icon": "user-check"
+  },
+  {
+    "name": "Üretenden Al",
+    "description": "Doğrudan üreticiden tüketiciye satış pazar yeri. Aracıları ortadan kaldıran, üreticiyi destekleyen e-ticaret platformu.",
+    "url": "https://www.uretendenal.com.tr",
+    "icon": "shopping-bag"
+  },
+  {
+    "name": "Cebrail Kara",
+    "description": "Dijital danışmanlık ve profesyonel portfolyo. Web geliştirme, SEO ve dijital pazarlama alanında uzman çözümler.",
+    "url": "https://www.cebrailkara.com.tr",
+    "icon": "monitor"
+  },
+  {
+    "name": "Proje Havuzu",
+    "description": "Mühendislik ve inşaat projeleri için teklif, ihale ve ekip bulma platformu. Projelerinizi yayınlayın, doğru ekiplerle hızla eşleşin.",
+    "url": "https://www.projehavuzu.com.tr",
+    "icon": "globe"
+  },
+  {
+    "name": "PDF Master",
+    "description": "Profesyonel PDF düzenleme ve dönüştürme araçları. Belgelerinizi yönetmek, düzenlemek ve dönüştürmek için kapsamlı online araçlar.",
+    "url": "https://www.pdfmaster.com.tr",
+    "icon": "file-text"
+  },
+  {
+    "name": "Peteks İnşaat",
+    "description": "Kaliteli yapı ve konut projeleri inşaat firması. Modern mimari, güvenli yapılar ve anahtar teslim inşaat projeleri.",
+    "url": "https://www.peteksinsaat.com.tr",
+    "icon": "building"
+  },
+  {
+    "name": "Tapu Takip Merkezi",
+    "description": "Profesyonel tapu ve kadastro işlem takibi. Gayrimenkul alım-satım süreçlerinizde güvenilir danışmanlık ve takip hizmeti.",
+    "url": "https://www.taputakipmerkezi.com.tr",
+    "icon": "briefcase"
+  },
+  {
+    "name": "Tapu Takip Adana",
+    "description": "Adana bölgesi tapu işlemleri ve danışmanlığı. Yerel uzmanlıkla tapu süreçlerinizi hızlandırın ve güvenle tamamlayın.",
+    "url": "https://www.taputakipadana.com.tr",
+    "icon": "map-pin"
+  },
+  {
+    "name": "Tapu Takip TR",
+    "description": "Ulusal çapta gayrimenkul ve tapu danışmanlığı. Türkiye genelinde tapu işlemleriniz için profesyonel destek.",
+    "url": "https://www.taputakipturkiye.com",
+    "icon": "globe"
+  },
+  {
+    "name": "Gayrimenkul Space",
+    "description": "Yenilikçi emlak ve yatırım fırsatları platformu. Gayrimenkul yatırımlarınız için güncel ilanlar ve piyasa analizleri.",
+    "url": "https://www.gayrimenkul.space",
+    "icon": "building"
+  },
+  {
+    "name": "Asma Tavan Adana",
+    "description": "Adana asma tavan ve iç mekan dekorasyon çözümleri. Modern tasarımlar ve profesyonel uygulama hizmetleri.",
+    "url": "https://www.asmatavanadana.com.tr",
+    "icon": "check-circle-2"
+  },
+  {
+    "name": "Rızaen Satış Pro",
+    "description": "Gayrimenkul satış işlemlerinde profesyonel rızaen satış çözümleri ve danışmanlık hizmetleri.",
+    "url": "https://www.rizaensatispro.com.tr",
+    "icon": "briefcase"
+  },
+  {
+    "name": "Ziyapaşa",
+    "description": "Adana'nın prestijli bölgesi Ziyapaşa'da yaşam, ticaret ve gayrimenkul projeleri.",
+    "url": "https://www.ziyapasa.com.tr",
+    "icon": "map-pin"
+  }
+]
