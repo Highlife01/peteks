@@ -36,6 +36,7 @@ import StructuredData from "@/components/StructuredData";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import SubsidiariesSection from "@/components/SubsidiariesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import { SECTORS_CATALOG } from "@/data/servicesCatalog";
 
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
@@ -543,7 +544,44 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          {/* 14 Ana İnşaat Disiplini Quick Catalog Grid */}
+          <div className="mt-14 bg-card/90 border-2 border-border/80 rounded-3xl p-6 sm:p-8 shadow-lg">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-border/60">
+              <div>
+                <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-accent block">
+                  14 Ana İnşaat Disiplini • 150+ Mühendislik Kalemi
+                </span>
+                <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-foreground mt-0.5">
+                  İnşaat & Endüstriyel Faaliyet Kataloğumuz
+                </h3>
+              </div>
+              <Link
+                to="/services"
+                className="text-xs font-bold text-accent hover:underline inline-flex items-center gap-1"
+              >
+                <span>Tüm Kataloğu Aç</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              {SECTORS_CATALOG.map((sector) => (
+                <Link
+                  key={sector.id}
+                  to="/services"
+                  className="p-3.5 rounded-xl bg-muted/40 hover:bg-amber-500/10 border border-border/70 hover:border-amber-500/40 transition-all flex items-center justify-between gap-2 group"
+                >
+                  <span className="text-xs font-bold text-foreground group-hover:text-accent truncate">
+                    {sector.title}
+                  </span>
+                  <span className="text-[10px] font-extrabold text-muted-foreground bg-background px-2 py-0.5 rounded border border-border shrink-0">
+                    {sector.count}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="text-center mt-10">
             <Button
               asChild
               variant="outline"
@@ -551,7 +589,7 @@ const Index = () => {
               className="rounded-full px-8 py-6 border-2 border-accent/40 hover:bg-accent hover:text-white font-bold transition-all"
             >
               <Link to="/services">
-                13+ Mühendislik Hizmetimizin Tamamını Görün
+                14 Ana İnşaat Disiplini & 150+ Hizmet Kalemini İnceleyin
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
