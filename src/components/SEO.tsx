@@ -18,7 +18,7 @@ const SEO = ({
   title = "PETEKS İnşaat & Mimarlık | Anahtar Teslim İnşaat, Villa, Çelik Yapı & Dekorasyon",
   description = "PETEKS; Adana, Mersin, Osmaniye, Niğde ve tüm Türkiye'de 25+ yıllık deneyimle konut, lüks villa, otel, çelik fabrika inşaatı, tadilat ve prefabrik yapı projelerinde anahtar teslim hizmet sunmaktadır.",
   keywords = "PETEKS, peteks inşaat, adana inşaat firması, mersin inşaat firması, villa yapımı, anahtar teslim tadilat, prefabrik ev fiyatları 2026, çelik yapı projeleri, fabrika inşaatı, saha betonu, radye temel, kat karşılığı inşaat",
-  ogImage = "/pwa-512x512.png",
+  ogImage = "/og-image.jpg",
   ogUrl,
   articleDate,
   author = "PETEKS Mimarlık & Mühendislik",

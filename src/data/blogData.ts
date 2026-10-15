@@ -1,3 +1,8 @@
+import hero1 from "@/assets/hero-1.jpg";
+import hero2 from "@/assets/hero-2.jpg";
+import hero3 from "@/assets/hero-3.jpg";
+import hero4 from "@/assets/hero-4.jpg";
+
 export interface BlogPostItem {
   id: string;
   slug: string;
@@ -22,7 +27,7 @@ export const blogPosts: BlogPostItem[] = [
     author: "İnş. Müh. Ahmet Yılmaz - PETEKS Mühendislik",
     date: "2026-07-20",
     readTime: "6 dk okuma",
-    image: "/assets/hero-2.jpg",
+    image: hero2,
     keywords: "prefabrik ev fiyatları 2026, çelik villa yapımı, prefabrik ev ruhsatı, depreme dayanıklı prefabrik",
     excerpt: "Prefabrik ev ve çelik villa yaptırmak isteyenler için 2026 m² maliyetleri, izin süreçleri, ısı yalıtım detayları ve avantaj rehberi.",
     content: `
@@ -59,8 +64,8 @@ export const blogPosts: BlogPostItem[] = [
     author: "Dr. Selim Arslan - Statik Proje Uzmanı",
     date: "2026-07-15",
     readTime: "8 dk okuma",
-    image: "/assets/hero-1.jpg",
-    keywords: "radye temel nedir, deprem dayanıklı bina, bina güçlendirme, kentsel dönüşüm istanbul",
+    image: hero1,
+    keywords: "radye temel nedir, deprem dayanıklı bina, bina güçlendirme, kentsel dönüşüm adana",
     excerpt: "Binaların deprem performansını artıran radye jeneratör temel sistemleri, C35/40 beton kullanımı ve kentsel dönüşüm kriterleri.",
     content: `
       <h2>Radye Temel Sisteminin Önemi</h2>
@@ -87,8 +92,8 @@ export const blogPosts: BlogPostItem[] = [
     author: "Mimar Merve Demir - PETEKS Dekorasyon",
     date: "2026-07-10",
     readTime: "5 dk okuma",
-    image: "/assets/hero-3.jpg",
-    keywords: "villa dekorasyonu, anahtar teslim tadilat, iç mimarlık istanbul, lüks dekorasyon",
+    image: hero3,
+    keywords: "villa dekorasyonu, anahtar teslim tadilat, iç mimarlık adana, lüks dekorasyon",
     excerpt: "Villalarda salon, mutfak, banyo renovasyonu ve akıllı ev otomasyonu entegrasyonu ile yaşam alanlarınızı yeniden tasarlayın.",
     content: `
       <h2>2026 İç Mimari Trendleri: Doğallık ve Akıllı Teknolojiler</h2>
@@ -106,7 +111,7 @@ export const blogPosts: BlogPostItem[] = [
     author: "Şantiye Şefi Mehmet Can - PETEKS Endüstri",
     date: "2026-07-02",
     readTime: "7 dk okuma",
-    image: "/assets/hero-4.jpg",
+    image: hero4,
     keywords: "çelik fabrika inşaatı, endüstriyel depo yapımı, saha betonu, çelik makas sistemi",
     excerpt: "Geniş açıklıklı endüstriyel tesisler, heavy-duty vinç yolları ve tozumaz parlak saha betonu uygulaması rehberi.",
     content: `

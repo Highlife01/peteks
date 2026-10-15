@@ -22,8 +22,8 @@ export default defineConfig(({ mode }) => ({
         description: "PETEKS - Moda, Tasarım, Tekstil & İnşaat Çözümleri",
         start_url: "/",
         display: "standalone",
-        background_color: "#ffffff",
-        theme_color: "#22c55e",
+        background_color: "#0b1120",
+        theme_color: "#0b1120",
         icons: [
           {
             src: "pwa-192x192.png",
