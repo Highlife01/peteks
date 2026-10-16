@@ -46,24 +46,18 @@ const Contact = () => {
     };
 
     setIsSubmitting(true);
-    const [saved, notified] = await Promise.allSettled([
-      import("@/lib/messages").then((m) => m.submitContactMessage(input)),
-      fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: import.meta.env.VITE_WEB3FORMS_KEY || "09fe2a21-d38c-4493-ba4a-3acc571fb910",
-          subject: `Yeni İletişim Formu - ${input.subject}`,
-          from_name: "PETEKS Web Sitesi",
-          ...input,
-        }),
-      }).then((res) => {
-        if (!res.ok) throw new Error("notify failed");
-      }),
-    ]);
-    setIsSubmitting(false);
+    let saved = false;
+    try {
+      const { submitContactMessage } = await import("@/lib/messages");
+      await submitContactMessage(input);
+      saved = true;
+    } catch (error) {
+      console.error("Mesaj kaydedilemedi:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
 
-    if (saved.status === "fulfilled" || notified.status === "fulfilled") {
+    if (saved) {
       form.reset();
       toast({
         title: "Mesajınız Gönderildi!",
