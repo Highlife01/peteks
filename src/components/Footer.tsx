@@ -192,10 +192,10 @@ const Footer = () => {
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 flex-shrink-0 text-amber-400" />
                 <a
-                  href="mailto:peteksinsaat001@gmail.com"
+                  href="mailto:info@peteksinsaat.com.tr"
                   className="text-slate-300 hover:text-amber-400 transition-colors break-all"
                 >
-                  peteksinsaat001@gmail.com
+                  info@peteksinsaat.com.tr
                 </a>
               </li>
             </ul>

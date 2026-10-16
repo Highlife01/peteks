@@ -1,0 +1,8 @@
+{
+  "firestore": [
+    {
+      "database": "peteks",
+      "rules": "firestore.rules"
+    }
+  ]
+}

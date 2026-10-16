@@ -145,7 +145,7 @@ const CityDistrictSEO = () => {
           image: `${siteUrl}/og-image.jpg`,
           description: `PETEKS İnşaat, ${city} ${district} bölgesinde anahtar teslim inşaat, konut projeleri, çelik yapı, prefabrik villa ve kat karşılığı arsa değerlendirme hizmetleri sunmaktadır.`,
           telephone: "+90-532-055-09-45",
-          email: "peteksinsaat001@gmail.com",
+          email: "info@peteksinsaat.com.tr",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Gürselpaşa Mah. 75163 Sk. Bekaroğlu Blue City Pınar A Blok No:5/A",

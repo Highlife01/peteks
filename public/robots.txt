@@ -45,6 +45,7 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /admin
 
 Sitemap: https://www.peteksinsaat.com.tr/sitemap.xml
 # AI Context Manifest: https://www.peteksinsaat.com.tr/llms.txt

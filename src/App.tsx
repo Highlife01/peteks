@@ -1,6 +1,7 @@
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { LanguageProvider } from "./components/LanguageContext";
@@ -22,6 +23,9 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import CityDistrictSEO from "./pages/CityDistrictSEO";
 import NotFound from "./pages/NotFound";
+
+// Yönetim paneli (Firebase SDK ağır olduğu için ana pakete dahil edilmez)
+const AdminPage = lazy(() => import("./pages/admin/AdminPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -60,6 +64,14 @@ const App = () => {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route
+                  path="/admin"
+                  element={
+                    <Suspense fallback={<div className="min-h-screen bg-slate-950" />}>
+                      <AdminPage />
+                    </Suspense>
+                  }
+                />
                 {/* SEO Pages */}
                 <Route path="/:city/:district" element={<CityDistrictSEO />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -90,7 +90,7 @@ const About = () => {
         longitude: 35.3213,
       },
       telephone: "+90-532-055-09-45",
-      email: "peteksinsaat001@gmail.com",
+      email: "info@peteksinsaat.com.tr",
       priceRange: "$$-$$$",
       areaServed: {
         "@type": "Country",

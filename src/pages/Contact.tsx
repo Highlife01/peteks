@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail, Clock, CheckCircle2, Loader2 } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -31,6 +31,55 @@ const Contact = () => {
     }
   }, [searchParams, toast]);
 
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    if (data.get("botcheck")) return;
+
+    const input = {
+      name: String(data.get("name") ?? ""),
+      phone: String(data.get("phone") ?? ""),
+      email: String(data.get("email") ?? ""),
+      subject: String(data.get("subject") ?? ""),
+      message: String(data.get("message") ?? ""),
+    };
+
+    setIsSubmitting(true);
+    const [saved, notified] = await Promise.allSettled([
+      import("@/lib/messages").then((m) => m.submitContactMessage(input)),
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY || "09fe2a21-d38c-4493-ba4a-3acc571fb910",
+          subject: `Yeni İletişim Formu - ${input.subject}`,
+          from_name: "PETEKS Web Sitesi",
+          ...input,
+        }),
+      }).then((res) => {
+        if (!res.ok) throw new Error("notify failed");
+      }),
+    ]);
+    setIsSubmitting(false);
+
+    if (saved.status === "fulfilled" || notified.status === "fulfilled") {
+      form.reset();
+      toast({
+        title: "Mesajınız Gönderildi!",
+        description: "En kısa sürede size dönüş yapacağız.",
+        variant: "default",
+      });
+      trackEvent("ads_conversion__deme_ba_latma_1");
+    } else {
+      toast({
+        title: "Mesaj gönderilemedi",
+        description: "Lütfen tekrar deneyin veya bizi telefonla arayın: 0532 055 09 45",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <SEO
@@ -44,7 +93,7 @@ const Contact = () => {
         data={{
           name: "PETEKS İnşaat & Mimarlık Merkez Ofis",
           telephone: "+90-532-055-09-45",
-          email: "peteksinsaat001@gmail.com",
+          email: "info@peteksinsaat.com.tr",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Gürselpaşa Mah. 75163 Sk. Bekaroğlu Blue City Pınar A Blok No:5/A",
@@ -100,8 +149,8 @@ const Contact = () => {
               {
                 icon: Mail,
                 title: "E-posta",
-                content: "peteksinsaat001@gmail.com",
-                link: "mailto:peteksinsaat001@gmail.com",
+                content: "info@peteksinsaat.com.tr",
+                link: "mailto:info@peteksinsaat.com.tr",
               },
               {
                 icon: Clock,
@@ -137,18 +186,17 @@ const Contact = () => {
               <CardContent className="p-8">
                 <h2 className="font-heading text-3xl font-bold mb-6 text-center">Bize Ulaşın</h2>
                 <form
-                  action="https://api.web3forms.com/submit"
-                  method="POST"
                   className="space-y-6"
-                  onSubmit={(e) => {
-                    setIsSubmitting(true);
-                    // Form will submit normally, but we can add additional handling if needed
-                  }}
+                  onSubmit={handleSubmit}
                 >
-                  <input type="hidden" name="access_key" value="09fe2a21-d38c-4493-ba4a-3acc571fb910" />
-                  <input type="hidden" name="subject" value="Yeni İletişim Formu - PETEKS" />
-                  <input type="hidden" name="from_name" value="PETEKS Web Sitesi" />
-                  <input type="hidden" name="redirect" value={`${typeof window !== 'undefined' ? window.location.origin : ''}/contact?success=true`} />
+                  <input
+                    type="text"
+                    name="botcheck"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="hidden"
+                  />
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>

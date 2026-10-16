@@ -229,7 +229,7 @@ const Index = () => {
       description:
         "Adana, Mersin, Osmaniye, Niğde ve tüm Türkiye'de anahtar teslim inşaat, çelik yapı, prefabrik villa, endüstriyel saha betonu ve dekorasyon hizmetleri.",
       telephone: "+90-532-055-09-45",
-      email: "peteksinsaat001@gmail.com",
+      email: "info@peteksinsaat.com.tr",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Gürselpaşa Mah. 75163 Sk. Bekaroğlu Blue City Pınar A Blok No:5/A",
